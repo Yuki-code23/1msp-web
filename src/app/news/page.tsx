@@ -1,14 +1,17 @@
-import React from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { newsData } from '@/data/news';
 
-const News = () => {
+export default function NewsPage() {
     return (
-        <section id="news" className="py-24 bg-white">
-            <div className="max-w-[1000px] mx-auto px-6 md:px-12">
+        <main className="min-h-screen bg-white">
+            <Header />
+
+            <section className="pt-32 pb-24 px-6 md:px-12 max-w-[1000px] mx-auto">
                 <div className="text-center mb-16">
                     <span className="block text-brand-green font-bold tracking-widest text-sm mb-2">NEWS</span>
-                    <h2 className="text-4xl font-bold text-gray-800 tracking-tight">News</h2>
+                    <h1 className="text-4xl font-bold text-gray-800 tracking-tight">News List</h1>
                     <div className="w-12 h-1 bg-brand-orange mx-auto mt-6"></div>
                 </div>
 
@@ -29,15 +32,16 @@ const News = () => {
                             </li>
                         ))}
                     </ul>
+
                     <div className="mt-12 text-center">
-                        <Link href="/news" className="inline-block px-12 py-3 border border-gray-300 text-gray-600 rounded-full font-bold hover:bg-brand-green hover:text-white hover:border-brand-green transition-all">
-                            一覧を見る
+                        <Link href="/" className="inline-block px-8 py-3 bg-gray-100 text-gray-600 rounded-full font-bold hover:bg-gray-200 transition-colors">
+                            トップに戻る
                         </Link>
                     </div>
                 </div>
-            </div>
-        </section>
-    );
-};
+            </section>
 
-export default News;
+            <Footer />
+        </main>
+    );
+}

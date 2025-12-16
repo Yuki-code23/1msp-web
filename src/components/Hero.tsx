@@ -9,7 +9,7 @@ const Hero = () => {
                 <img
                     src="/hero-bg-jp-v2.png"
                     alt="Japanese IT Professional"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[75%_center] md:object-top"
                 />
                 {/* Overlay for text readability - White fade */}
                 <div className="absolute inset-0 bg-white/80 md:bg-white/60"></div>

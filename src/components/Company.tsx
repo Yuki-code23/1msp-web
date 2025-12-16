@@ -10,7 +10,7 @@ const Company = () => {
                     <div className="w-12 h-1 bg-brand-orange mx-auto mt-6"></div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-start">
+                <div className="grid md:grid-cols-2 gap-12">
                     <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                         <table className="w-full text-left border-collapse">
                             <tbody>
@@ -49,15 +49,19 @@ const Company = () => {
                         </table>
                     </div>
 
-                    <div className="h-[400px] bg-gray-200 rounded-2xl overflow-hidden flex items-center justify-center relative shadow-inner">
-                        {/* Google Maps Placeholder */}
-                        <div className="absolute inset-0 bg-gray-300"></div>
-                        <div className="relative z-10 text-center">
-                            <p className="text-gray-500 font-bold bg-white/90 px-6 py-3 rounded-full shadow-lg backdrop-blur-sm">
-                                Google Maps Area
-                            </p>
-                            <p className="text-xs text-gray-500 mt-2">API Key Required</p>
-                        </div>
+                    <div className="h-full min-h-[400px] bg-gray-200 rounded-2xl overflow-hidden shadow-inner translate-y-0">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            id="gmap_canvas"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d411.599225863498!2d132.440508765776!3d34.38116420350743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa25af5557877%3A0xf6384b883668d5c4!2z44CSNzMwLTA4NDUg5bqD5bO255yM5bqD5bO25biC5Lit5Yy66Iif5YWl5bed5Y-j55S677yR77yT4oiS77yT77yVIOaIuOWAieODk-ODqw!5e0!3m2!1sja!2sjp!4v1765878864369!5m2!1sja!2sjp"
+                            frameBorder="0"
+                            scrolling="no"
+                            marginHeight={0}
+                            marginWidth={0}
+                            title="Google Maps"
+                            className="w-full h-full grayscale-[0.5] hover:grayscale-0 transition-all duration-500"
+                        ></iframe>
                     </div>
                 </div>
             </div>

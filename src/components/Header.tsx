@@ -16,6 +16,11 @@ const Header = () => {
             <li><Link href="#news" className="hover:text-brand-green transition-colors">News</Link></li>
             <li><Link href="#company" className="hover:text-brand-green transition-colors">Company</Link></li>
             <li>
+              <a href="https://hp-recruit.net/1msp/" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 border-2 border-brand-green text-brand-green rounded-full font-bold hover:bg-brand-green hover:text-white transition-all">
+                採用情報
+              </a>
+            </li>
+            <li>
               <Link href="#contact" className="inline-block px-8 py-3 bg-brand-orange text-white rounded-full font-bold shadow-sm hover:bg-orange-500 transition-all hover:shadow-md">
                 お問い合わせ
               </Link>
