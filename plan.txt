@@ -1,0 +1,83 @@
+1. プロジェクト概要
+既存の求人媒体ページにある情報をベースに、信頼感のあるモダンなコーポレートサイト（1ページ構成のLP形式）としてリニューアル構築を行う。
+担当範囲: デザイン、コーディング、お名前.comサーバーへのデプロイ、動作確認まで
+保守運用: なし（納品後の更新はスポット対応想定）
+
+2. 参照サイト・素材
+デザイン・構成の参考（トーン＆マナー）:
+https://akippa.co.jp/
+掲載コンテンツ（原稿元）:
+https://hp-recruit.net/1msp/
+※上記サイトのテキスト・画像を使用（必要に応じて高画質なフリー素材等で補完すること）
+3. 技術スタック・要件
+カテゴリ
+技術選定
+備考
+Framework
+Next.js (App Router)
+必須設定: output: 'export' (next.config.js)
+Language
+TypeScript
+型定義を徹底すること
+Styling
+Tailwind CSS
+レスポンシブ対応必須（SPファースト）
+Backend
+PHP (7.4 or 8.x)
+お問い合わせフォーム送信機能のみに使用
+Deploy
+手動アップロード
+ビルド生成物（out/配下）をFTPでアップロード
+4. サイト構成（ディレクトリ・コンポーネント案）
+基本はシングルページ構成とし、ヘッダーのリンクをクリックするとページ内スクロールで該当セクションへ移動する。
+ページ構成
+Header
+ロゴ
+ナビゲーション（About, News, Company, Contact）
+Main Visual (Hero)
+キャッチコピー（原稿元より抜粋）”人に寄り添うスキルを、 未来の力に変える仕事。”
+背景画像（業務イメージ）
+About / Service
+事業内容紹介
+akippaのサイトのように、アイコン＋テキストで分かりやすく配置
+内容としては、広島県内唯一のIT機器訪問サポート会社
+News
+お知らせリスト（最新3〜5件表示）
+※更新仕様: CMSは導入しない。src/data/news.ts 等の配列データを直接編集し、ビルドする運用とする。
+Company
+会社概要（テーブルレイアウト）
+Google Maps埋め込み
+Contact
+お問い合わせフォーム
+項目: お名前, メールアドレス, お問い合わせ内容
+※実装: React Hook Form + PHPメール送信API
+Footer
+コピーライト
+5. 開発・デプロイ手順
+(1) 環境構築
+npx create-next-app@latest 1msp-web --typescript --tailwind --eslint
+(2) お問い合わせ機能の実装
+共用サーバーではNode.js APIが動作しないため、以下の構成で実装すること。
+Frontend: fetchメソッドで /api/send.php へPOST送信。
+Backend: public/api/send.php を作成し、mb_send_mail 等でメール送信処理を記述。
+※PHPファイルはビルド時にそのまま出力されるよう public フォルダ直下に配置すること。
+送付先のメールアドレスは仮でinfo@nmdlab.jpとすること
+(3) ビルド設定
+next.config.js を修正し、静的エクスポートモードを有効化する。
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  // 画像最適化コンポーネント(<Image>)は共用サーバーでエラーになるため、
+  // unoptimized: true にするか、<img>タグを使用すること。
+  images: {
+    unoptimized: true,
+  },
+};
+module.exports = nextConfig;
+(4) デプロイ（お名前.comサーバー）
+npm run build を実行。
+生成された out ディレクトリの中身を、サーバーの公開ディレクトリ（例: public_html）直下にFTPソフト等でアップロード。
+重要: アップロード後、必ずお問い合わせフォームの送受信テストを行うこと（PHPが動作しているか確認）。
+6. 注意事項
+画像パス: 静的エクスポート時、画像のパス切れが起きやすいため、相対パスやベースパスの設定に注意すること。
+404エラー: 共用サーバーでは、存在しないURLにアクセスした場合の挙動がWebサーバー設定（.htaccessなど）に依存する。トップページ以外へのダイレクトアクセスは今回想定しないが、念のため確認しておくこと。
