@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      # Next.jsのビルド出力先(out)をWebルートにマウント
+      - ./out:/var/www/html
+    depends_on:
+      - mailhog
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025" # 管理画面アクセス用

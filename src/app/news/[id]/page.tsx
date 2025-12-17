@@ -25,7 +25,7 @@ export default async function NewsDetail({
     }
 
     return (
-        <div className="min-h-screen flex flex-col font-sans text-gray-800">
+        <div className="min-h-screen flex flex-col font-sans text-gray-800 bg-white">
             <Header />
 
             <main className="flex-grow pt-24 pb-20">
