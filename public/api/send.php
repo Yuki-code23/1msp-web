@@ -21,6 +21,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $headers = "From: webmaster@1msp.co.jp"; // Sender address, adjust as needed
 
         if (mb_send_mail($to, $subject, $body, $headers)) {
+            // Auto-reply to the user
+            $user_to = $data->email;
+            $user_subject = "【1msp】お問い合わせありがとうございます";
+            $user_body = $data->name . " 様\n\n";
+            $user_body .= "この度はお問い合わせいただき、誠にありがとうございます。\n";
+            $user_body .= "以下の内容で受け付けました。\n\n";
+            $user_body .= "--------------------------------------------------\n";
+            $user_body .= "お問い合わせ内容:\n" . $data->message . "\n";
+            $user_body .= "--------------------------------------------------\n\n";
+            $user_body .= "担当者より順次ご連絡させていただきます。\n";
+            $user_body .= "今しばらくお待ちください。\n\n";
+            $user_body .= "※このメールは自動送信です。\n";
+            $user_headers = "From: info@nmdlab.jp";
+
+            mb_send_mail($user_to, $user_subject, $user_body, $user_headers);
+
             http_response_code(200);
             echo json_encode(["message" => "Email sent successfully."]);
         } else {
