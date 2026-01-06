@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "lftp -u deploy@1msp.jp,1234abcd+-+- -e \"set ftp:ssl-force true; set ssl:verify-certificate no; mirror -R ./out /public_html/1msp.jp/; quit\" www140.onamae.ne.jp"
   },
   "dependencies": {
     "next": "16.0.10",
