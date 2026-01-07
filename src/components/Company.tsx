@@ -29,8 +29,23 @@ const Company = () => {
                                 <tr className="border-b border-gray-100">
                                     <th className="py-5 font-bold text-gray-800 text-sm align-top">住所</th>
                                     <td className="py-5 text-gray-600 leading-relaxed text-sm">
-                                        〒730-0845<br />
-                                        広島県広島市中区舟入川口町13-35戸倉ビル
+                                        <div className="mb-6">
+                                            <span className="font-bold block text-gray-800 mb-1">本社</span>
+                                            〒730-0845<br />
+                                            広島県広島市中区舟入川口町13-35戸倉ビル
+                                        </div>
+                                        <div className="mb-6">
+                                            <span className="font-bold block text-gray-800 mb-1">岡山営業所</span>
+                                            〒700-0821<br />
+                                            岡山県岡山市北区中山下1丁目11番15号<br />
+                                            新田第1ビル402
+                                        </div>
+                                        <div>
+                                            <span className="font-bold block text-gray-800 mb-1">高松営業所</span>
+                                            〒760-0018<br />
+                                            香川県高松市天神前10番5号<br />
+                                            高松セントラルスカイビルディング 3F south
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr className="border-b border-gray-100">

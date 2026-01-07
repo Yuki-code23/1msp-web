@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         !empty($data->email) &&
         !empty($data->message)
     ) {
-        $to = "info@nmdlab.jp"; // Temporary email as per plan
+        $to = "n-higashikawa@1msp.jp";
         $subject = "【1msp-web】お問い合わせがありました";
         $body = "お名前: " . $data->name . "\n";
         $body .= "メールアドレス: " . $data->email . "\n\n";
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user_body .= "担当者より順次ご連絡させていただきます。\n";
             $user_body .= "今しばらくお待ちください。\n\n";
             $user_body .= "※このメールは自動送信です。\n";
-            $user_headers = "From: info@nmdlab.jp";
+            $user_headers = "From: n-higashikawa@1msp.jp";
 
             mb_send_mail($user_to, $user_subject, $user_body, $user_headers);
 
