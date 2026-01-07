@@ -50,8 +50,8 @@ const Company = () => {
                             <span className="w-2 h-8 bg-brand-green rounded-full"></span>
                             本社
                         </h3>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-[350px] flex flex-col justify-center">
+                        <div className="grid md:grid-cols-2 gap-8 items-start">
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-[175px] flex flex-col justify-center">
                                 <p className="text-gray-600 leading-loose">
                                     〒730-0845<br />
                                     広島県広島市中区舟入川口町13-35<br />
@@ -80,8 +80,8 @@ const Company = () => {
                             <span className="w-2 h-8 bg-brand-orange rounded-full"></span>
                             岡山営業所
                         </h3>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-[350px] flex flex-col justify-center">
+                        <div className="grid md:grid-cols-2 gap-8 items-start">
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-[175px] flex flex-col justify-center">
                                 <p className="text-gray-600 leading-loose">
                                     〒700-0821<br />
                                     岡山県岡山市北区中山下1丁目11番15号<br />
@@ -110,8 +110,8 @@ const Company = () => {
                             <span className="w-2 h-8 bg-brand-orange rounded-full"></span>
                             高松営業所
                         </h3>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-[350px] flex flex-col justify-center">
+                        <div className="grid md:grid-cols-2 gap-8 items-start">
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-[175px] flex flex-col justify-center">
                                 <p className="text-gray-600 leading-loose">
                                     〒760-0018<br />
                                     香川県高松市天神前10番5号<br />
