@@ -17,7 +17,7 @@ const Service = () => {
                 <div className="mt-16 flex flex-col md:flex-row items-center gap-8 md:gap-16">
                     <div className="md:w-1/2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                         <img
-                            src="/images/service/it-install.png"
+                            src="/images/service/on-site-support.jpg"
                             alt="オンサイトサポート"
                             className="w-full h-full object-cover"
                         />
@@ -26,8 +26,9 @@ const Service = () => {
                         <span className="text-brand-orange font-bold text-sm tracking-widest mb-3 block">ON-SITE SUPPORT</span>
                         <h3 className="text-3xl font-bold text-gray-800 mb-6">オンサイトサポート</h3>
                         <p className="text-gray-600 leading-loose mb-8">
-                            PC・周辺機器のトラブル対応から、定期的なメンテナンス、新規導入時のセットアップまで、お客様の現地に訪問してIT環境をトータルサポート。<br />
-                            専門的なスキルを持ったスタッフが、迅速かつ丁寧に課題を解決し、ビジネスの安定稼働を支えます。
+                            中国5県・四国4県を中心に、IT機器の設置や設定を行うために直接お客様先へ訪問し、サポートを提供しています。ご依頼先は個人のお客様から法人企業まで幅広く対応。<br />
+                            私たちが担うのは、エンドユーザーがIT機器を実際に使い始める“ラストワンマイル”の領域。<br />
+                            困りごとをその場で解決し、安心して使い始めていただくための、きめ細やかなサポートを行っています。
                         </p>
                         <div className="flex flex-wrap gap-3 text-xs text-brand-orange font-bold">
                             <span className="px-4 py-2 bg-white rounded-full shadow-sm">訪問トラブル対応</span>
