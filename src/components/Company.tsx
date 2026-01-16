@@ -74,62 +74,54 @@ const Company = () => {
                         </div>
                     </div>
 
-                    {/* Okayama Office */}
+                    {/* Branch Offices */}
                     <div>
                         <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
                             <span className="w-2 h-8 bg-brand-orange rounded-full"></span>
-                            岡山営業所
+                            営業所
                         </h3>
-                        <div className="grid md:grid-cols-2 gap-8 items-start">
-                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-[175px] flex flex-col justify-center">
-                                <p className="text-gray-600 leading-loose">
-                                    〒700-0821<br />
-                                    岡山県岡山市北区中山下1丁目11番15号<br />
-                                    新田第1ビル402
-                                </p>
-                            </div>
-                            <div className="h-[350px] bg-gray-200 rounded-2xl overflow-hidden shadow-inner">
-                                <iframe
-                                    width="100%"
-                                    height="100%"
-                                    src="https://maps.google.com/maps?q=%E5%B2%A1%E5%B1%B1%E7%9C%8C%E5%B2%A1%E5%B1%B1%E5%B8%82%E5%8C%97%E5%8C%BA%E4%B8%AD%E5%B1%B1%E4%B8%8B1%E4%B8%81%E7%9B%AE11%E7%95%AA15%E5%8F%B7&output=embed"
-                                    frameBorder="0"
-                                    scrolling="no"
-                                    marginHeight={0}
-                                    marginWidth={0}
-                                    title="Okayama Office Map"
-                                    className="w-full h-full grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
-                                ></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Takamatsu Office */}
-                    <div>
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                            <span className="w-2 h-8 bg-brand-orange rounded-full"></span>
-                            高松営業所
-                        </h3>
-                        <div className="grid md:grid-cols-2 gap-8 items-start">
-                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-[175px] flex flex-col justify-center">
-                                <p className="text-gray-600 leading-loose">
-                                    〒760-0018<br />
-                                    香川県高松市天神前10番5号<br />
-                                    高松セントラルスカイビルディング 3F south
-                                </p>
-                            </div>
-                            <div className="h-[350px] bg-gray-200 rounded-2xl overflow-hidden shadow-inner">
-                                <iframe
-                                    width="100%"
-                                    height="100%"
-                                    src="https://maps.google.com/maps?q=%E9%A6%99%E5%B7%9D%E7%9C%8C%E9%AB%98%E6%9D%BE%E5%B8%82%E5%A4%A9%E7%A5%9E%E5%89%8D10%E7%95%AA5%E5%8F%B7&output=embed"
-                                    frameBorder="0"
-                                    scrolling="no"
-                                    marginHeight={0}
-                                    marginWidth={0}
-                                    title="Takamatsu Office Map"
-                                    className="w-full h-full grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
-                                ></iframe>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div>
+                                    <h4 className="text-lg font-bold text-gray-800 mb-4">東京営業所</h4>
+                                    <p className="text-gray-600 leading-loose">
+                                        〒110-0005<br />
+                                        東京都台東区上野六丁目1番6号<br />
+                                        御徒町グリーンハイツ1005号
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg font-bold text-gray-800 mb-4">横浜営業所</h4>
+                                    <p className="text-gray-600 leading-loose">
+                                        〒220-0011<br />
+                                        神奈川県横浜市西区高島二丁目11番2号<br />
+                                        スカイメナー横浜519
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg font-bold text-gray-800 mb-4">金沢営業所</h4>
+                                    <p className="text-gray-600 leading-loose">
+                                        〒920-0852<br />
+                                        石川県金沢市此花町5番6号<br />
+                                        ライフ金沢第1ビル 601A
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg font-bold text-gray-800 mb-4">岡山営業所</h4>
+                                    <p className="text-gray-600 leading-loose">
+                                        〒700-0821<br />
+                                        岡山県岡山市北区中山下1丁目11番15号<br />
+                                        新田第1ビル402
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg font-bold text-gray-800 mb-4">高松営業所</h4>
+                                    <p className="text-gray-600 leading-loose">
+                                        〒760-0018<br />
+                                        香川県高松市天神前10番5号<br />
+                                        高松セントラルスカイビルディング 3F south
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

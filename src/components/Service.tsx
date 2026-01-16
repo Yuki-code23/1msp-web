@@ -17,7 +17,7 @@ const Service = () => {
                 <div className="mt-16 flex flex-col md:flex-row items-center gap-8 md:gap-16">
                     <div className="md:w-1/2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                         <img
-                            src="/images/service/on-site-support.jpg"
+                            src="/images/service/service-support-scene.jpg"
                             alt="オンサイトサポート"
                             className="w-full h-full object-cover"
                         />
